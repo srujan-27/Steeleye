@@ -1,0 +1,47 @@
+
+Name: Sai Srujan Vemula 
+Lovely Professional university
+University  Reg.No: 11904349
+
+Frontend Engineer Assignment                                                                                                                                                         
+React Component Code Review
+
+1)Explain what the simple List component does.
+Ans:  List is generally used to store data in ordered format ,here also this List is being used to render data in ordered format
+list items are wrapped under WrappedSingleListItem. a handleClick function which we pass to the 
+SingleListItem component by which the background color of that
+particular item changes. There is also a memo method used in the
+list component. React reuses the memoized content from the same
+reference. By memoized, it states that it doesn't re-render
+unnecessarily. The memo is used to make website speed more efficient
+and perform better.
+
+2)What problems / warnings are there with code?
+Ans:
+1)In our code, as the parent component, which is a wrappedListComponent,
+has only one state and that is also making direct changes in our
+child component, which means changing the parent will anyhow change
+the child, so in such a case, using memo is a waste of memory.
+2)While destructuring the array, we must follow the sequence of
+occurrence of the value, and when we destructure the array of use
+state in a given problem, we mismatch the sequence due to which we
+named the values wrong, or say we altered the names, which caused
+us to use them incorrectly, which caused us the error.
+3)In the given code, the default items array was null, and it is
+not possible to map over null, so we need to initialize it with some value.
+4)While mapping over the array of items, we should have given the
+key to each item to identify it uniquely.
+5)There is a syntactical error in the predefined syntax. Instead
+of using an array, we should have used arrayOf and instead of using
+shapOf, we should have used the shape only.
+6)While calling the call back function inside a child, we should
+have used the arrow function.
+7)In props check, we set the isselected value to be boolean, but
+when we pass boolean values as props, the value is converted to
+a string or number, so make sure to convert that to boolean before
+using. 
+
+3)Please fix, optimize, and/or modify the component as much as you think is necessary.
+Ans:
+I fixed,optimized and modified the code and uploaded on github along with this pdf.
+I added cursor(grab) while hovering on the items .
